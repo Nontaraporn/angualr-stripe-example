@@ -4,7 +4,6 @@
 
 export const environment = {
   production: false,
-  stripe_key: 'pk_test_51M6oDXEJLQ5PWEXhQuJrtFK523d5zY5wd7kHvYXGHtn6i687UnBAkBI09RW6xteawum9lBHGKPzkWrZ6YQDYDtep00Q4NG2QPt',
 };
 
 /*
@@ -15,3 +14,9 @@ export const environment = {
  * on performance if an error is thrown.
  */
 // import 'zone.js/dist/zone-error';  // Included with Angular CLI.
+
+export const stripe_live_key = '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';
+
+export const stripe_test_key = 'sk_test_51M6oDXEJLQ5PWEXhQxTepiAIp1IwiaXaALQRKqDUj7UqKhczgP1OUUvHoleVgupPkyXgO767ymDLXeHpACJQsgYk00BUDheNg9';
+
+export const BASE_URL = 'https://api.stripe.com';

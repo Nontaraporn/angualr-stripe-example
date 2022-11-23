@@ -1,11 +1,24 @@
-
-    <section>
-        <div class="product">
-            <img src="https://voice.botnoi.ai/assets/img/Real_point.svg" alt="" />
-            <div class="description">
-                <h3>2,500 PT + ได้โบนัสพิเศษ 100 PT(เฉลี่ย 1.92 สตางค์ / PT)</h3>
-                <h5>฿20.00</h5>
-            </div>
+<div class="payment">
+    <div class="packages">
+        <div>
+            <img src="https://voice.botnoi.ai/assets/img/Real_point.svg">
+            <span>ระบุจำนวนที่ต้องการ</span>
+            <form [formGroup]="inputPointForm">
+                <input type="number" [min]="0" [step]="50" formControlName="point">
+                <span>PT</span>
+            </form>
         </div>
-        <button (click)="checkout()" type="submit" id="checkout-button">Checkout</button>
-    </section>
+        <button (click)="inputCheckout()">
+            {{ calcalateBaht(inputPointForm.value.point) }} บาท
+        </button>
+    </div>
+    <div class="packages" *ngFor="let package of packages">
+        <div>
+            <img src="https://voice.botnoi.ai/assets/img/Real_point.svg">
+            <span>{{ package.name }}</span>
+        </div>
+        <button (click)="packageCheckout(package.priceId)">
+            {{ package.price | number: "1.0":"en-US" }} บาท
+        </button>
+    </div>
+</div>
