@@ -3,13 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-// import { QrCodePaymentComponent } from './qr-code-payment/qr-code-payment.component';
-// import { QRCodeModule } from 'angularx-qrcode';
+import { CardPaymentComponent } from './card-payment/card-payment.component';
+import { SuccessComponent } from './success/success.component';
+import { FailureComponent } from './failure/failure.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    // QrCodePaymentComponent,
+    CardPaymentComponent,
+    SuccessComponent,
+    FailureComponent
   ],
   imports: [
     BrowserModule,
